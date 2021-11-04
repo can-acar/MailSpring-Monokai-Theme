@@ -1,6 +1,6 @@
 # Mailspring Monokai Theme
 
-A theme for [Mailspring](https://github.com/Foundry376/Mailspring) inspired by the [Arc](https://github.com/NicoHood/arc-theme) theme.
+A theme for [Mailspring](https://github.com/Foundry376/Mailspring) inspired by the [Monokai](https://github.com/can-acar/MailSpring-Monokai-Theme) theme.
 A project for personal use.
 
 <div align="left"><img src="screenshots/main.png" alt="Preview" /></div>
