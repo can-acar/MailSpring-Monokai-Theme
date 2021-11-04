@@ -1,0 +1,439 @@
+@import "monokai-variables";
+
+//------------------------------------------------------------
+// Message list area
+//------------------------------------------------------------
+.column-MessageList {
+	background: @colorMessageViewBackground;
+	border-left: 1px solid @colorBorder;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+
+}
+
+#message-list .messages-wrap .scroll-region-content-inner {
+	padding: 10px 20px;
+	background: @colorMessageViewBackground;
+}
+
+#message-list .message-item-area .message-iframe-container{
+	margin-top: -10px;
+}
+#message-list .message-item-area iframe{
+	background-color: #ffffff;
+	padding: 10px;
+}
+
+//------------------------------------------------------------
+// Message header
+//------------------------------------------------------------
+
+
+#message-list .message-header {
+	position: relative;
+    font-size: 13.02px;
+    color: #ffffff;
+    margin: 0;
+    padding: 10px;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-radius: 0;
+
+}
+#message-list .message-header .message-time, #message-list .message-header .message-indicator {
+    color: #ffffff;
+}
+
+#message-list .message-header .message-time{
+
+}
+
+#message-list .message-header .message-actions-wrap{
+
+}
+
+header.message-header {
+    background-color: #11121d;
+    padding-top: 15px;
+}
+
+.message-participants .from-label, .message-participants .to-label, .message-participants .reply-to-label, .message-participants .cc-label, .message-participants .bcc-label {
+	color: #ffffff;
+}
+
+.message-participants .collapsed-participants .to-contact {
+	color: #ffffff;
+}
+//------------------------------------------------------------
+// Message body
+//------------------------------------------------------------
+#message-list .message-item-wrap {
+	.message-item-white-wrap {
+		box-shadow: none !important;
+		background: @colorMessageViewBackground;
+		border: 1px solid @colorBorder;
+		border-radius: 5px !important;
+
+		.message-item-area {
+			//padding: 0 25px 14px 25px;
+			padding: 0;
+		}
+
+		//---------------------------------
+		// Message header text
+		//---------------------------------
+		.from-contact {
+			font-size: 14px;
+			color: @colorEmailFormContact;
+		}
+
+		.to-participants {
+			font-size: 14px;
+
+			&.collapsed {
+				margin-top: 3px;
+			}
+		}
+
+		//---------------------------------
+		// Message header track icon
+		//---------------------------------
+		.message-header-right {
+			.open-tracking-message-status.opened {
+				img.content-mask {
+					background-color: @colorAccent;
+				}
+			}
+		}
+	}
+
+	//---------------------------------
+	// Collapsed message
+	//---------------------------------
+	&.collapsed {
+		.message-item-white-wrap {
+			background-color: @colorBodyBgDarker;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message subject area
+//------------------------------------------------------------
+
+#message-list .message-subject-wrap {
+	padding-left: 2px;
+	border-bottom: 1px solid #34384e;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+
+	//---------------------------------
+	// Message subject
+	//---------------------------------
+	.message-subject {
+		font-size: 18px;
+		color: @colorMessageSubject;
+	}
+
+	//---------------------------------
+	// Subject area buttons
+	//---------------------------------
+	.message-icons-wrap {
+		cursor: default;
+	}
+
+	.message-icons-wrap div {
+		background: #636471;
+		border: 1px solid #e53265;
+	 	border-radius: 3px;
+		height: 26px;
+		padding: 0px 13px;
+		color: #e53265;
+
+		img.content-mask {
+			margin-top: -6px;
+		}
+
+		&:hover {
+			border: 1px solid #e53265;
+			background-color:#E3E4F3;
+		}
+
+		&:active {
+			border-color: @colorBtnBorderActiveLight;
+			background-color: @colorBtnBgActiveLight;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Reply/forward buttons
+//------------------------------------------------------------
+#message-list .message-header .message-actions-wrap {
+	.button-dropdown.bordered {
+		.primary-item {
+			box-shadow: none;
+			background: @colorBodyBg;
+			border: 1px solid transparent;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.secondary-picker {
+			box-shadow: none;
+			background: @colorBodyBg;
+			border: 1px solid transparent;
+			border-left-width: 0;
+			border-radius: 0 3px 3px 0;
+		}
+
+		&:hover {
+			.primary-item {
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
+			}
+
+			.secondary-picker {
+				background: @colorBtnBgLight;
+				border-color: @colorBtnBorderLight;
+			}
+		}
+
+		.primary-item:active {
+			background: @colorAccent;
+			border-color: @colorAccent;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+
+		.secondary-picker:active {
+			background: @colorAccent;
+			border-color: @colorAccent;
+
+			img.content-mask {
+				background-color: @colorBtnTextActive;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.mail-label.removable {
+	box-shadow: none !important;
+	background: @colorAccent !important;
+	color: @colorBtnTextActive !important;
+	margin-top: 3px;
+
+	img.content-mask {
+		background-color: @colorBtnTextActive !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message footer
+//------------------------------------------------------------
+#message-list  .footer-reply-area-wrap {
+	box-shadow: none;
+	background: @colorBodyBg;
+	border: 1px solid @colorBorder;
+	border-radius: 0 0 3px 3px;
+
+	//---------------------------------
+	// Reply icon/text
+	//---------------------------------
+	.footer-reply-area {
+		width: max-content;
+		margin: 9px 12px;
+		font-size: 14px;
+		color: @colorAccent;
+
+		img.content-mask {
+			background-color: @colorAccent;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Minified messages
+//------------------------------------------------------------
+#message-list .minified-bundle {
+	.msg-line {
+		box-shadow: none;
+		border: 1px solid @colorBorder;
+		border-radius: 3px 3px 0 0;
+		background-color: @colorBodyBgDarker;
+	}
+
+	.num-messages {
+		border: 1px solid @colorBorder;
+		background-color: @colorBodyBg;
+		color: @colorAccent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message attachments
+//------------------------------------------------------------
+.nylas-attachment-item {
+	//---------------------------------
+	// File attachment box
+	//---------------------------------
+	&.file-attachment-item {
+		.file-thumbnail-preview {
+			border: 1px solid @colorBorder;
+			border-radius: 3px 3px 0 0;
+		}
+
+		.file-info-wrap {
+			background-color: darken(@colorWindowBg, 3%);
+			border: 1px solid @colorBorder;
+			border-radius: 3px 0 0 3px;
+			box-shadow: none;
+		}
+
+		.file-action-icon {
+			background-color: darken(@colorWindowBg, 3%);
+			border: 1px solid @colorBorder;
+			border-left-width: 0px;
+			border-radius: 0 3px 3px 0;
+
+			img.content-mask {
+				background-color: @colorText;
+			}
+
+			&:not(:last-child) {
+				border-radius: 0;
+			}
+
+			&:hover {
+				background-color: darken(@colorWindowBg, 6%);
+			}
+
+			&:active {
+				background-color: @colorAccent;
+
+				img.content-mask {
+					background-color: @colorBtnTextActive;
+				}
+			}
+		}
+
+		&:focus {
+			.file-thumbnail-preview {
+				border-color: @colorAccent;
+			}
+
+			.file-info-wrap {
+				border-color: @colorAccent;
+				border-right-color: @colorBorder;
+			}
+
+			.file-action-icon {
+				border-color: @colorAccent;
+
+				&:not(:last-child) {
+					border-right-color: @colorBorder;
+				}
+			}
+		}
+	}
+	//---------------------------------
+	// Image attachment download button
+	//---------------------------------
+	&.image-attachment-item {
+		.file-action-icon {
+			right: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			cursor: pointer;
+
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Other attachment controls
+//------------------------------------------------------------
+#message-list .download-all {
+	.attachment-number {
+		font-size: 14px;
+	}
+
+	.separator {
+		display: none;
+	}
+
+	.download-all-action {
+		padding-left: 14px;
+		font-size: 14px;
+		color: @colorAccent;
+
+		img.content-mask {
+			background-color: @colorAccent;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message warning bar
+//------------------------------------------------------------
+#message-list .show-hidden-messages {
+	border: none;
+	border-left: 3px solid @colorAccent;
+	border-radius: 0px;
+	background-color: @colorWarningBar;
+
+	a {
+		color: @colorAccent;
+		cursor: pointer;
+	}
+}
+
+//------------------------------------------------------------
+// Scroll bars
+//------------------------------------------------------------
+#message-list .scrollbar-track,
+.composer-full-window .scrollbar-track {
+	background: @colorWindowBg;
+	border-left: none;
+	width: 10px;
+
+	.scrollbar-handle {
+		background: fade(darken(@colorBodyBg, 45%), 40%);
+		border: none;
+	}
+}
+
+.composer-full-window .scrollbar-track {
+	background: @colorBodyBg;
+}

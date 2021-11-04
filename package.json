@@ -1,0 +1,12 @@
+{
+	"name": "Monokai",
+  "displayName": "Monokai",
+  "theme": "ui",
+  "version": "1.0.0",
+  "description": "Monokai theme for Mailspring",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}
